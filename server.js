@@ -19,5 +19,7 @@ app.get("/api/fetch/:id", (req, res) => {
   if (!data) return res.status(404).json({ error: "Not found" });
   res.json(data);
 });
-
+app.get("/", (req, res) => {
+  res.send("Server is up and running. Test successful!");
+});
 app.listen(3000, () => console.log("Server running on port 3000"));
