@@ -20,5 +20,4 @@ app.get("/api/fetch/:id", (req, res) => {
   res.json(data);
 });
 
-// 👇 Export the handler for Vercel
-module.exports = app;
+app.listen(3000, () => console.log("Server running on port 3000"));
