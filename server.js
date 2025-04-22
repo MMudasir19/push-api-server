@@ -14,6 +14,7 @@ app.post("/api/push", (req, res) => {
   res.json({ id });
 });
 
+
 app.get("/api/fetch/:id", (req, res) => {
   const data = store.get(req.params.id);
   if (!data) return res.status(404).json({ error: "Not found" });
