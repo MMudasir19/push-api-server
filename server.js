@@ -9,7 +9,7 @@ app.use(
   cors({
     origin: [
       "https://website-one-rho-steel.vercel.app",
-      "https://website-two-three.vercel.app",
+      "http://localhost:5174",
     ], // add your frontend domain here
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
