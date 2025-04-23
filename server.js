@@ -5,7 +5,16 @@ const { v4: uuidv4 } = require("uuid");
 const jwt = require("jsonwebtoken");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://website-one-rho-steel.vercel.app",
+      "https://website-two-three.vercel.app",
+    ], // add your frontend domain here
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.use(express.json()); // for parsing application/json
 
 // Use environment variable or fallback secret
