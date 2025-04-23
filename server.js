@@ -7,10 +7,7 @@ const jwt = require("jsonwebtoken");
 const app = express();
 app.use(
   cors({
-    origin: [
-      "https://website-one-rho-steel.vercel.app",
-      "http://localhost:5174",
-    ], // add your frontend domain here
+    origin: ["*"], // add your frontend domain here
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
